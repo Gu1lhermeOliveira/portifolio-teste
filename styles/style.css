@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,600;1,600&display=swap');
+
+/* variaveis utilizadas para evitar repetiçoes no codigo css */
+:root {
+    --cor-primaria: #5C7285;
+    --cor-secundaria: #E2E0C8;
+    --cor-terciaria: #818C78;
+    --cor-hover: #A7B49E;
+
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    /* paragrafos e textos */
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* height: 100vh; */
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho{
+    padding: 2% 0% 0% 15%;
+}
+
+.cabecalho__menu{
+    display: flex;
+    gap: 80px;    
+}
+
+.cabecalho__menu__link{
+    font-size: 1.5rem;
+    color: var(--cor-secundaria);
+    font-weight: 600;
+    margin: 0 10px;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-family: var(--fonte-secundaria);
+}
+
+.cabecalho__menu__link:hover{
+    color: var(--cor-terciaria)
+}
+
+.titulo-destaque{
+    color:var(--cor-terciaria);
+}
+.apresentacao{
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+        
+}
+
+.apresentacao__conteudo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /*espaçamento entre linhas */
+    
+}
+
+.apresentacao__conteudo__titulo{
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria)
+}
+
+.apresentacao__conteudo__texto{
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__conteudo__texto a{ /*personalizar a tag a */
+    text-decoration: none;
+    color: var(--cor-terciaria);
+}
+
+.apresentacao__conteudo__texto p{ /* personalizar a tag p */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+.apresentacao__links{
+    display: flex;
+    flex-direction: column; /* para deixar os conteudos na vertical */
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+
+}
+
+.apresentacao__links__subtitulo{
+    font-family: var(--fonte-primaria);
+    font-size: 1.5rem;
+}
+
+.apresentacao__links__navegacao{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-terciaria);
+    color: var(--cor-secundaria);
+    width: 50%; /*largura */ 
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    padding: 21.5px 0;
+    text-decoration: none; /*retirar a linha de baixo do link */
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    margin: 25px;
+    
+}
+
+.apresentacao__links__link:hover{ /* tudo será estilizado quando passar o mouse por cima */
+    background-color: var(--cor-hover);
+    padding: 3%;
+    cursor: pointer;
+}
+
+.rodape{
+    text-align: center;
+    justify-content: center;
+    color: var(--cor-secundaria);
+    background-color: var(--cor-terciaria);
+    padding: 24px;
+    font-family: var(--fonte-secundaria);
+    font-weight: 400px;
+    font-size: 1,5rem;
+}
+
+.apresentacao__imagem{
+    width: 50%;
+}
+/* significa que as regras dentro dela só vão funcionar quando a largura da tela for menor ou igual a 1200 pixels. */
+@media (max-width: 1200px){
+    .cabecalho{
+        padding: 10%;
+
+    }
+    .cabecalho__menu{
+        justify-content: center;
+    }
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%;
+        
+    }
+
+    .apresentacao__conteudo{
+        width: auto;
+    }
+}
+
+/* Esse código significa que as regras dentro dele só serão aplicadas se a tela tiver entre 480 pixels e 800 pixels de largura.
+*/
+@media (min-width: 480px) and (max-width: 800px) {
+     /* body {
+        background-color: rgb(229, 230, 173);
+    }
+        */
+}
